@@ -17,6 +17,8 @@ $govuk-assets-path: '/govuk/assets/';
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+// childcare account cards
+
 .pta-card-container {
     display: flex;
     flex-direction: row;
@@ -24,19 +26,16 @@ $govuk-assets-path: '/govuk/assets/';
   }
   
   .pta-card {
-    background-color: #f3f2f1;
-    border: 1px solid #b1b4b6;
-    padding: 10px;
     margin-right: 20px;
     flex: 33%;
-    max-width: 170px;
+    max-width: 290px;
   }
   
   .pta-card:last-child {
     margin-right: 0px;
   }
   
-  @media (max-width: 800px) {
+  @media (max-width: 500px) {
     .pta-card-container {
       flex-direction: column;
     }
@@ -44,3 +43,56 @@ $govuk-assets-path: '/govuk/assets/';
       margin-bottom: 20px;
     }
   }
+
+// account home
+
+
+    // service cards with titles
+
+    .service-card--with-title {
+        border: 1px solid 	#b1b4b6;
+        margin-bottom: 20px;
+    }
+
+    .service-card-title {
+        padding: 20px;
+        padding-bottom: 5px;
+        background-color: #f3f2f1;
+    }
+
+    .service-card-body {
+        padding: 20px;
+    }
+
+    .service-card-date {
+        color: #505A5F;
+        margin-bottom: 0px;
+    }
+
+    // service cards without titles
+
+    .service-card--no-title {
+        border: 1px solid 	#b1b4b6;
+        border-top: 4px solid #b1b4b6;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    // account blurb
+
+    .account-blurb {
+        padding: 20px;
+        background-color: #f3f2f1;
+    }
+
+
+// header
+
+.header-link {
+  color: white;
+}
+
+.header-link-account {
+  display: inline;
+  color: white;
+}

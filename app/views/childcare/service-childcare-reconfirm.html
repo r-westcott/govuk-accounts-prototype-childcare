@@ -1,0 +1,46 @@
+{% extends "layout-childcare.html" %}
+
+{% block pageTitle %}
+The childcare service - Reconfirmation
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Reconfirm your eligibility</h1>
+    <p class="govuk-caption-m govuk-!-margin-bottom-4">To continue to get Tax-Free Childcare or 30 hours free childcare, you must check and reconfirm your details with us every 3 months. </p>    </header>
+    
+    <h2 class="govuk-heading-m">Before you confirm</h2>
+
+    <p>If you live in England and your child is about to start reception class, you won’t be eligible for 30 hours free childcare any more. You can still use your Tax-Free Childcare account, if you have one. Or you can reconfirm your details to apply to Tax-Free Childcare, if you haven’t already done that. Use the childcare calculator to check wihether this is the best support for your child.</p>
+
+    <h2 class="govuk-heading-m">If you don't confirm</h2>
+
+    <p>You’ll still be able to use your Tax-Free Childcare account, but you won’t get government support paid into it. </p>
+
+    <p>If you’re getting 30 hours free childcare, you’ll need to contact your local authority to find out whethee you can still use your code.</p>
+  
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Continue",
+      href: "/childcare/service-childcare-success"
+    }) }}
+
+    <p><a href="">Homepage</a></p>
+    </div>
+
+ 
+
+</div>
+{% endblock %}

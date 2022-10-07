@@ -1,0 +1,183 @@
+{% extends "layout-childcare.html" %}
+
+{% block pageTitle %}
+The childcare service - Reconfirmation summary
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Your reconfirmation summary</h1>
+    <p class="govuk-heading-s govuk-!-margin-bottom-4">These are the details you gave when you applied or last confirmed. Check to make sure you expect them to be correct for the next 3 months.</p>
+    
+    <table class="govuk-table govuk-!-margin-bottom-8">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Your details</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Frist name</span></th>
+          <td class="govuk-table__cell">First name</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Last name</span></th>
+          <td class="govuk-table__cell">Last name</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Date of birth</span></th>
+          <td class="govuk-table__cell">1 January 1978</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">National Insurance number</span></th>
+          <td class="govuk-table__cell">PB 10 10 10 C</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Address</span></th>
+          <td class="govuk-table__cell">1 Street <br> Town <br> AB12 3DC</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="govuk-table govuk-!-margin-bottom-8">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Your contact details and residence</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Email</span></th>
+          <td class="govuk-table__cell">First name</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Telephone number</span></th>
+          <td class="govuk-table__cell">12345678901</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">UK national, EEA national or neither</span></th>
+          <td class="govuk-table__cell">UK national</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="govuk-!-margin-bottom-8">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Child’s details</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Frist name</span></th>
+          <td class="govuk-table__cell">First name</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Last name</span></th>
+          <td class="govuk-table__cell">Last name</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Date of birth</span></th>
+          <td class="govuk-table__cell">1 May 2018</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Relationship with the child</span></th>
+          <td class="govuk-table__cell">Parent</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Same address as you</span></th>
+          <td class="govuk-table__cell"></td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">You’ve said that this child expects to receive Disability living allowance</span></th>
+          <td class="govuk-table__cell"></td>
+        </tr>
+      </tbody>
+    </table>
+    <p><a href="" class="govuk-link--no-visited-state">Change</a></p>
+    <p><a href="" class="govuk-link--no-visited-state">Add another child</a></p>
+  </div>
+
+  <div class="govuk-!-margin-bottom-8">
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Other childcare support</th>
+          <th scope="col" class="govuk-table__header"></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Childcare grants and bursaries</span></th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Getting, expecting to get or appealing tax credits</span></th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Getting, expecting to get or appealing Universal Credit</span></th>
+          <td class="govuk-table__cell">No</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><span class="govuk-body">Childcare voucher scheme</span></th>
+          <td class="govuk-table__cell">Workplace nursery scheme</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><a href="" class="govuk-link--no-visited-state">Change</a></p>
+  </div>
+
+  <h3 class="govuk-heading-m">Declaration</h3>
+
+  <p>Government will check the details you’ve given against their records.</p> 
+
+   <p>In most cases we’ll give you an answer to your application straight away. </p> 
+
+    <p>If you give the wrong details the government may:</p> 
+    <ul class="govuk-list govuk-list--bullet">
+    <li>take back any money you receive</li> 
+    <li>fine you</li> 
+    <li>restrict your account</li> 
+    <li>take you to court</li> 
+    </ul>
+
+    <p>You’re responsible for  all the details in this application. If you’re paid too much Tax-Free Childcare, that amount will be taken back from your childcare account, through your tax code or from you directly, </p> 
+
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+        By continuing, you confirm that the details you’ve given are correct and complete.
+      </strong>
+    </div>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+    {{ govukButton({
+      text: "Accept and send",
+      href: "/childcare/service-childcare-success"
+    }) }}
+
+    <p><a href="">Back</a></p>
+    </div>
+
+ 
+
+</div>
+{% endblock %}
