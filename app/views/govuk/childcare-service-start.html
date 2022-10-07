@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Request a basic DBS check
+{% endblock %}
+
+{% block header %}
+{{ govukHeader({
+homepageUrl: "/",
+serviceName: "",
+serviceUrl: "/",
+containerClasses: "govuk-width-container"
+}) }}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-breadcrumbs">
+  <ol class="govuk-breadcrumbs__list">
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Home</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Childcare and parenting</a>
+    </li>
+    <li class="govuk-breadcrumbs__list-item">
+      <a class="govuk-breadcrumbs__link" href="javascript:void(0)">Childcare</a>
+    </li>
+  </ol>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      Sign in to your childcare account
+    </h1>
+
+    <p>Use this account to get your 30 hours free childcare or pay for your Tax-Free Childcare.
+    </p>
+
+    <p>To keep getting your 30 hours free childcare or Tax-Free Childcare, you must sign in every 3 months and confirm your details are up to date.</p>
+
+    <div class="govuk-inset-text">
+      <p>If you want to get 30 hours free childcare or Tax-Free Childcare and you’re from an EU country, Switzerland, Norway, Iceland or Liechtenstein, you need settled or pre-settled status or permission to access public funds.</p>
+    </div>
+
+    <p>If you’re eligible for 30 hours free childcare, sign in to get a code to give to your childcare provider.</p>
+
+    <p>If you’ve registered for Tax-Free Childcare, sign in to:
+
+    </p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>pay money into your account</li>
+      <li>pay your childcare provider</li>
+      <li>apply for a new child</li>
+    </ul>
+
+    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Sign in",
+        href: "/auth/v9/gov-account",
+        isStartButton: true
+      }) }}
+ 
+    <h2 class="govuk-heading-m">Before you start</h2>
+
+    <p>You sign in to your account in a different way if you’re a childcare provider.</p>
+
+    <h3 class="govuk-heading-s">If you’ve been unable to use the service</h3>
+
+    <p>You may be able to claim compensation if you’ve had technical problems with your account.    </p>
+
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <!-- The Related items component is not part of GOV.UK Frontend but will be styled if used in the Prototype Kit -->
+
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Part of
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="#">
+              Get Tax-Free Childcare: step by step
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">
+              Get 30 hours free childcare: step by step
+            </a>
+          </li>
+          <li>
+            <a class="govuk-link" href="#">
+              Get childcare: step by step
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+    <aside class="app-related-items" role="complementary">
+      <h2 class="govuk-heading-m" id="subsection-title">
+        Related content
+      </h2>
+      <nav role="navigation" aria-labelledby="subsection-title">
+        <ul class="govuk-list govuk-!-font-size-16">
+          <li>
+            <a class="govuk-link" href="#">
+              Help paying for childcare
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+{% endblock %}

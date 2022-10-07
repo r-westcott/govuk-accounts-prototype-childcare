@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Enter your password
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header-auth-mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner.html" %}
+<a class="govuk-back-link" href="create-email">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">You already have a GOV.UK One Login</h1>
+
+    <p class="govuk-body">There's already a GOV.UK acount using
+      <strong>{{ data['emailAddress'] or 'email@example.com' }}</strong>
+    </p>
+
+    <h3 class="govuk-heading-m">Using your GOV.UK One Login</h3>
+    <p>You can use your GOV.UK One Login with some services.</p>
+    
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Services you can sign in to with GOV.UK One Login 
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Apply for a passport</li>
+          <li>Dart charge</li> 
+          <li>Find a lost teacher reference number (TRN)</li> 
+          <li>Licensing for exporting controlled goods (LITE)</li> 
+          <li>Personal tax account</li> 
+          <li>Recruit an apprentice</li> 
+          <li>Register for a National Professional Qualification (NPQ)</li> 
+          <li>Request a basic DBS check</li> 
+          <li>The childcare service</li> 
+        </ul>
+      </div>
+    </details>
+
+    <p>GOV.UK One Login is currently separate from some other government accounts (for example Universal Credit).</p> 
+
+    <p>In the future, you'll be able to use it to sign in to all services on GOV.UK.</p> 
+    
+    <h3 class="govuk-heading-m" >Enter your password</h3>
+
+    <form class="form" action="/auth/v9/signin-checkphone" method="post">
+
+      <div class="govuk-form-group" style="margin-bottom: 15px;">
+
+        <div class="gem-c-show-password" data-module="show-password" data-disable-form-submit-check="false" data-show-text="Show" data-hide-text="Hide" data-show-full-text="Show password" data-hide-full-text="Hide password" data-announce-show="Your password is shown" data-announce-hide="Your password is hidden">
+          <div class="govuk-form-group">
+            <label for="password" class="gem-c-label govuk-label">Enter your password to sign in</label>
+            <div class="gem-c-show-password__input-wrapper">
+              <input name="password[login]" class="gem-c-input govuk-input gem-c-input--with-password govuk-!-width-two-thirds" id="password" type="password" spellcheck="false" autocomplete="off" aria-describedby="password-hint">
+              <span class="govuk-visually-hidden" aria-live="polite">Your password is hidden</span>
+            </div> <!-- /. gem-c-show-password__input-wrapper -->
+          </div> <!-- /. govuk-form-group -->
+        </div> <!-- /. gem-c-show-password -->
+
+      </div>
+
+      <p><a href="#">I've forgotten my password</p>
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

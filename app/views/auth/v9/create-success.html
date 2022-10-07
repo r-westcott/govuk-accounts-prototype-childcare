@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+You have successfully created your GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header-auth-mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../_includes/phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">You’ve created your GOV.UK account</h1>
+
+      <form class="form" action="../../end-of-task-1" method="post">
+
+        <p class="govuk-body">Now continue to use the service.</p>
+
+        <button id="button" class="govuk-button" data-module="govuk-button">Continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
