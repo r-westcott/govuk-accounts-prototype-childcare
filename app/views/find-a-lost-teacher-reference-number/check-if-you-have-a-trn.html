@@ -1,0 +1,65 @@
+{% extends "layout-trn.html" %}
+
+{% block pageTitle %}
+Check if you have a TRN – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Check if you have a TRN</h1>
+
+      <form class="form" action="/auth/v9/gov-account-3" method="post">
+
+        <p>You will have a TRN if you:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>hold qualified teacher status (QTS) in England or Wales</li>
+          <li>hold early years teaching status (EYTS) in England</li>
+          <li>hold a national professional qualification (NPQ)</li>
+          <li>are working towards QTS, EYTS or an NPQ</li>
+          <li>contribute to the Teachers’ Pensions scheme in England or Wales</li>
+          <li>have a relevant restriction in relation to teaching in England</li>
+        </ul>
+
+        <p>If you have qualified teacher learning and skills (QTLS) status, you will not necessarily have a TRN. You do not need one to apply for a job.</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Do you think you have a TRN?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-you-think-you-have-a-trn" name="do-you-think-you-have-a-trn" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="do-you-think-you-have-a-trn">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="do-you-think-you-have-a-trn-2" name="do-you-think-you-have-a-trn" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="do-you-think-you-have-a-trn-2">
+                  No
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
