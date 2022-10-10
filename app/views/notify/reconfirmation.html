@@ -1,0 +1,37 @@
+{% extends "notify/_template.html" %}
+
+{% set subjectLine = "Childcare service reminder - confirm your details are up to date" %}
+
+{% block emailBody %}
+
+<p>
+  Dear Sam
+</p>
+
+<p class="govuk-body govuk-!-font-weight-bold">Childcare service reminder - confirm your details are up to date</p>
+
+<p>
+  To continue getting Tax-Free Childcare or 30 hours free childcare, you must confirm your details are up to date with us by <span class="govuk-body govuk-!-font-weight-bold">17 October 2022</span>.
+</p>
+
+    <p class="govuk-body">
+      You can do this in your childcare account. To sign in, go to <a href="/govuk/childcare-service-start">www.gov.uk/childcareaccount</a>. Then select ‘Reconfirmation’ and follow the instructions. It’s easy to do and will only take a few minutes.
+    </p>
+
+<p class="govuk-body govuk-!-font-weight-bold">If you don’t confirm your details are up to date</p>
+
+<p><span class="govuk-body govuk-!-font-weight-bold">Tax-Free Childcare</span> - you can still use your childcare account to pay your childcare provider but you won’t get any further government payments into it.</p>
+
+<p><span class="govuk-body govuk-!-font-weight-bold">30 hours free childcare</span> - you can still use your childcare account to pay your childcare provider but you won’t get any further government payments into it.</p>
+
+<p>For more information on Tax-Free Childcare or 30 hours free childcare</p>
+
+<p>Go to <a href="">www.gov.uk/help-with-childcare-costs</a> or call our helpline on 0300 123 4097.</p> 
+
+<p>Yours sincerely</p>
+
+<p>Childcare service team</p>
+
+  {% endblock %}
+  {% block header %}{% endblock %}
+  {% block footer %}{% endblock %}
