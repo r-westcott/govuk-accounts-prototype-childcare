@@ -1,0 +1,47 @@
+{% extends "layout-trn.html" %}
+
+{% block pageTitle %}
+What is your National Insurance number? – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="awarded-qts" method="post">
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--xl" for="what-is-ni-number">
+              What is your National Insurance number?
+            </label>
+          </h1>
+          <div id="what-is-ni-number-hint" class="govuk-hint">
+            It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+          </div>
+          <input class="govuk-input govuk-input--width-10" id="what-is-ni-number" name="what-is-ni-number" type="text">
+        </div>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              I don't know my National Insurance number
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            To be confirmed
+          </div>
+        </details>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
