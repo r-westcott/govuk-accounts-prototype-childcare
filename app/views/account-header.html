@@ -24,9 +24,10 @@
 <div class="govuk-header--service-nav">
   <div class="govuk-width-container">
     <div class="govuk-header__content govuk-header__content--service-nav" data-module="govuk-header">
+      {% if showServiceNav == 'true' %}
         <nav aria-label="Menu" class="govuk-header__navigation govuk-header__navigation--service-nav">
           <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" aria-expanded="false"></button>
-
+          
           <ul id="navigation" class="govuk-header__navigation-list">
             <li class="govuk-header__navigation-item {% if activeServiceNavItem == "payg-home" %} govuk-header__navigation-item--active {% endif %}">
                 <a class="govuk-header__link" href="/account/account-home">
@@ -45,6 +46,7 @@
           </li>
           </ul>
         </nav>
+        {% endif %}
     </div>
   </div>
   <hr class="govuk-section-break govuk-section-break--visible">
