@@ -16,12 +16,20 @@
       <p>This is a prototype for testing service integration with the GOV.UK One Login account.</p>
 
 
-      <h2 class="govuk-heading-m">Tasks</h2>
+      <h2 class="govuk-heading-m">Task 1</h2>
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
         text: "Task 1",
         href: "/auth/v9/gov-account-2"
+      }) }}
+
+      <h2 class="govuk-heading-m">Task 2</h2>
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Task 2",
+        href: "/find-a-lost-teacher-reference-number/start"
       }) }}
 
     </div>

@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{# if coming in from a service - find out which one #}
+
+{% block pageTitle %}
+Sign in or create a GOV.UK account
+{% endblock %}
+
+{% block header %}
+{% include "../_includes/header-auth-mvp.html" %}
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../_includes/phase-banner.html" %}
+  {% if data['use-govuk-account'] %}
+    <a class="govuk-back-link" href="/preauth/mvp/identity-welcome">Back</a>
+  {% else %}
+
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/auth/v9/create-email-2" method="post" class="form">
+      <h1 class="govuk-heading-l">You need a GOV.UK One Login to continue
+        {% if data.prototype['serviceType'] === 'identity' %}
+        <!-- to prove your identity -->
+        {% elif data.prototype['serviceType'] === 'save' %}
+        to save your progress
+        {% elif data.prototype['serviceType'] === 'account' %}
+        <!-- to create your account -->
+        {% endif %}
+      </h1>
+
+      <p>You can currently use GOV.UK One Login to sign in to some services on GOV.UK.<p>
+
+      <p>In the future, you'll be able to use it with all services on GOV.UK.<p>
+
+      <h3 class="govuk-heading-m">Create your GOV.UK One Login or sign in</h3>
+
+      <p>You'll need:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>an email address</li>
+        <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
+      </ul>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Create your GOV.UK One Login",
+          href: "/auth/v9/create-email-3"
+        }) }}
+
+        {{ govukButton({
+          text: "Sign in",
+          classes: "govuk-button--secondary",
+          href: "/auth/v9/signin-email-2"
+        }) }}
+      </div>
+      <!--
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">About GOV.UK accounts</span>
+        </summary>
+        <div class="govuk-details__text">
+          <p>GOV.UK accounts are new. At the moment you can only use your GOV.UK account with a few services.</p>
+          <p>GOV.UK accounts are currently separate from other government accounts (for example Government Gateway).</p>
+          <p>In future, you'll be able to use your GOV.UK account to sign in to most services on GOV.UK.</p>
+        </div>
+      </details>
+    -->
+    </form>
+  </div>
+</div>
+
+{% endblock %}
