@@ -1,0 +1,76 @@
+{% extends "layout-trn.html" %}
+
+{% block pageTitle %}
+Your name – {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your name</h1>
+
+      <form class="form" action="your-dob" method="post">
+
+        <p>We’ll match your name against the Teaching Regulation Agency records.</p>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="first-name">
+              First name
+            </label>
+          </h1>
+          <input class="govuk-input" id="first-name" name="first-name" type="text">
+        </div>
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="last-name">
+              Last name
+            </label>
+          </h1>
+          <input class="govuk-input" id="last-name" name="last-name" type="text">
+        </div>
+        
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Have you ever changed your name?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-ever-changed-your-name" name="have-you-ever-changed-your-name" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="have-you-ever-changed-your-name">
+                  No, I haven’t changed my name
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-ever-changed-your-name-2" name="have-you-ever-changed-your-name" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="have-you-ever-changed-your-name-2">
+                  Yes, I changed my name
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="have-you-ever-changed-your-name-3" name="have-you-ever-changed-your-name" type="radio" value="prefer-not-to-say">
+                <label class="govuk-label govuk-radios__label" for="have-you-ever-changed-your-name-3">
+                  Prefer not to say
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
