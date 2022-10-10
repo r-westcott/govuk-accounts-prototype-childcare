@@ -9,7 +9,7 @@ Sign in to your GOV.UK account
 {% endblock %}
 
 {% block beforeContent %}
-{% include "../../_includes/phase-banner.html" %}
+{% include "../_includes/phase-banner.html" %}
   {% if prevURL === "http://localhost:3000/preauth/mvp/create-spinner" or prevURL === "https://gds-identity.herokuapp.com/preauth/mvp/create-spinner" or prevURL === "https://gds-identity-ur.herokuapp.com/preauth/mvp/create-spinner" %}
     <a class="govuk-back-link" href="{{ preAuth }}">Back</a>
   {% else %}

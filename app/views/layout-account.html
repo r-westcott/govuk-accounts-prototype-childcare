@@ -1,6 +1,8 @@
 {#- We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework. -#}
 {%- set assetPath = '/govuk/assets' -%}
 
+{% import "includes/service-nav.njk" as serviceNav %}
+
 {% extends "govuk/template.njk" %}
 
 {% from "govuk/components/accordion/macro.njk"           import govukAccordion %}
@@ -19,6 +21,7 @@
 {% from "govuk/components/input/macro.njk"               import govukInput %}
 {% from "govuk/components/inset-text/macro.njk"          import govukInsetText %}
 {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
+{% from "govuk/components/pagination/macro.njk"          import govukPagination %}
 {% from "govuk/components/panel/macro.njk"               import govukPanel %}
 {% from "govuk/components/phase-banner/macro.njk"        import govukPhaseBanner %}
 {% from "govuk/components/radios/macro.njk"              import govukRadios %}
@@ -40,7 +43,7 @@
 {% endblock %}
 
 {% block header %}
-{% include "childcare-header.html" %}
+{% include "account-header.html" %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
