@@ -119,8 +119,52 @@ $govuk-assets-path: '/govuk/assets/';
   display: inline;
   float: right;
   cursor: pointer;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.govuk-header__navigation-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 856px) {
+  .govuk-header{
+    padding-right: 0px;
+    border-bottom: 0px;
+  }
+  .govuk-service-header{
+    display: flex;
+    .govuk-header__logo{
+      padding-right: 0px;
+    }
+  }
+  .service-header-service-name-mobile{
+    background-color: black;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-bottom: 10px solid #1d70b8;
+  }
+  .account-exposed-menu{
+    display: grid;
+  }
+  .govuk-header__navigation-item {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .service-header-service-name{
+    display: none;
+  }
+  .govuk-header__container{
+    border-bottom: none;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 856px) {
+  .service-header-service-name-mobile{
+    display: none;
+  }
 }
 
 .service-header__navigation-open {
@@ -181,6 +225,13 @@ $govuk-assets-path: '/govuk/assets/';
   margin-top: 30px;
   margin-bottom: 40px;
 }
+
+@media (max-width: 856px) {
+  .service-header-link {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  }
 
 
 .account-header-onelogin {
