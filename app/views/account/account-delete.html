@@ -1,0 +1,72 @@
+
+{% extends "layout-account.html" %}
+
+{% set showServiceNav = "true" %}
+{% set activeServiceNavItem = "your-details" %}
+
+{% block pageTitle %}
+  GOV.UK One Login - Settings - Delete account
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        Are you sure you want to delete your GOV.UK One Login
+      </h1>
+      
+      <p>This will delete your GOV.UK One Login account. </p>
+
+      <p>It will not delete any other government accounts you may have, such as Universal Credit.</p>
+
+      <h2 class="govuk-heading-m">What happens after you delete your GOV.UK One Login</h2>
+
+      <p>Your GOV.UK One Login will not be permanently deleted straight away. </p>
+
+      <p>You can change your mind within 14 days - you’ll get an email explaining what to do.</p>
+
+      <p>After 14 days:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>the sign in details for your GOV.UK One Login will be permanently deleted</li>
+        <li>you’ll no longer be able to sign in to services you’ve used with your GOV.UK One Login</li>
+        <li>we will notify all the services you’ve used with your GOV.UK One Login - they may contact you separately about the information they hold about you </li>
+      </ul>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Services you’ve used with your GOV.UK One Login 
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Apply for a passport</li>
+            <li>Personal tax account</li>
+            <li>Request a basic DBS check</li>
+            <li>Teacher services</li>
+            <li>The childcare service</li>
+          </ul>
+        </div>
+      </details>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Delete your GOV.UK One Login",
+        classes: "govuk-button--warning"
+      }) }}
+
+    </div>
+  </div>
+
+{% endblock %}
