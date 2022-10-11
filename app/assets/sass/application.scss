@@ -148,6 +148,9 @@ $govuk-assets-path: '/govuk/assets/';
   .account-exposed-menu{
     display: grid;
   }
+  .one-login-desktop{
+    display: none;
+  }
   .govuk-header__navigation-item {
     padding-left: 5px;
     padding-right: 5px;
@@ -163,6 +166,9 @@ $govuk-assets-path: '/govuk/assets/';
 
 @media (min-width: 856px) {
   .service-header-service-name-mobile{
+    display: none;
+  }
+  .one-login-mobile{
     display: none;
   }
 }
