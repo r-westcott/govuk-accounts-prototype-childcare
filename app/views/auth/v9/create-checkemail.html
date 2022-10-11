@@ -9,7 +9,7 @@ Check your email
 {% endblock %}
 
 {% block beforeContent %}
-{% include "../../_includes/phase-banner.html" %}
+{% include "../_includes/phase-banner.html" %}
 <a class="govuk-back-link" href="create-email">Back</a>
 {% endblock %}
 
@@ -22,7 +22,7 @@ Check your email
     </h1>
 
     <div class="govuk-inset-text">
-      <p>We have sent an email to: <strong>{{ data['emailAddress'] or 'email@address.com' }}</strong> </p>
+      <p>We have sent an email to: <strong>{{ data['emailAddress'] or 'name@email.com' }}</strong> </p>
     </div>
 
     <p>The email contains a 6 digit security code.</p>

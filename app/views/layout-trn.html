@@ -41,13 +41,7 @@
 {% endblock %}
 
 {% block header %}
-  {# Set serviceName in config.js. #}
-  {{ govukHeader({
-    homepageUrl: "/",
-    serviceName: "Find a lost teacher reference number (TRN)",
-    serviceUrl: "/",
-    containerClasses: "govuk-width-container"
-  }) }}
+{% include "trn-header.html" %}
 {% endblock %}
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
