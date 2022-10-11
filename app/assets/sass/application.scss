@@ -103,7 +103,6 @@ $govuk-assets-path: '/govuk/assets/';
   float: right;
 }
 
-
 .person-icon {
   top: .3em;
   margin-left: 10px;
@@ -115,4 +114,12 @@ $govuk-assets-path: '/govuk/assets/';
   font-weight: lighter;
   font-size: 24px;
   margin-left: 5px;
+}
+
+.govuk-table__cell {
+  width: 200px;
+}
+
+.govuk-header__logo-onelogin {
+  padding-right: 0px;
 }

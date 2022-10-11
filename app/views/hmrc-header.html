@@ -1,8 +1,7 @@
-
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
-    <div class="govuk-header__logo govuk-header__logo-onelogin">
-      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <!--[if gt IE 8]><!-->
           <svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36">
@@ -13,41 +12,30 @@
           <img src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image" width="36" height="32">
           <![endif]-->
           <span class="govuk-header__logotype-text">
-            GOV.UK 
+            GOV.UK
           </span>
-          </a>
-          <span class="account-header-onelogin ">One Login</span> 
-          </span>
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <a href="/childcare/service-childcare-home" class="govuk-header__link govuk-header__service-name">
+        Personal tax account
+      </a>
+      <nav aria-label="Menu" class="govuk-header__navigation service-header__navigation">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+
+        <ul id="navigation" class="govuk-header__navigation-list service-header__navigation">
+          <li class="govuk-header__navigation-item">
+            <a class="govuk-header__link" href="/account/account-home">
+              GOV.UK One Login
+            </a>
+            <svg class="person-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 11C22 17.0751 17.0751 22 11 22C4.92487 22 0 17.0751 0 11C0 4.92487 4.92487 0 11 0C17.0751 0 22 4.92487 22 11Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9998 11.5C13.0708 11.5 14.7498 9.82107 14.7498 7.75C14.7498 5.67893 13.0708 4 10.9998 4C8.92869 4 7.24976 5.67893 7.24976 7.75C7.24976 9.82107 8.92869 11.5 10.9998 11.5ZM11 20C13.7377 20 16.1899 18.7776 17.8405 16.8489C16.4371 14.5413 13.8987 13 11.0004 13C8.10184 13 5.56332 14.5415 4.15994 16.8495C5.81062 18.7779 8.26259 20 11 20ZM3.29297 18.8487L3.29298 18.8487C4.19465 19.7342 5.24823 20.4655 6.41103 21H6.41097C5.24819 20.4655 4.19463 19.7342 3.29297 18.8487Z" fill="#1D70B8"/>
+              </svg>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
-
-<div class="govuk-header--service-nav">
-  <div class="govuk-width-container">
-    <div class="govuk-header__content govuk-header__content--service-nav" data-module="govuk-header">
-        <nav aria-label="Menu" class="govuk-header__navigation govuk-header__navigation--service-nav">
-          <!--
-          <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" aria-expanded="false"></button>
-          -->
-          <ul id="navigation" class="govuk-header__navigation-list">
-            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "payg-home" %} govuk-header__navigation-item--active {% endif %}">
-                <a class="govuk-header__link" href="/account/account-home">
-                Home
-                </a>
-            </li>
-            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "your-details" %} govuk-header__navigation-item--active {% endif %}">
-                <a class="govuk-header__link" href="/account/account-settings">
-                Settings
-                </a>
-            </li>
-            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "" %} govuk-header__navigation-item--active {% endif %}">
-                <a class="govuk-header__link" href="/">
-                Sign out
-                </a>
-          </li>
-          </ul>
-        </nav>
-    </div>
-  </div>
-  <hr class="govuk-section-break govuk-section-break--visible">
-</div>
