@@ -1,0 +1,75 @@
+{% extends "layout-childcare.html" %}
+
+{% block pageTitle %}
+The childcare service - Home
+{% endblock %}
+
+{% block beforeContent %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "beta"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+    <header class="hmrc-page-heading govuk-!-margin-bottom-8">
+      <h1 class="govuk-heading-xl govuk-!-margin-bottom-4">Your childcare service account</h1>
+      <p class="govuk-caption-xl govuk-!-margin-bottom-4">FIRSTNAME LASTNAME</p>
+      <a href="" class="govuk-body govuk-link govuk-link govuk-link--no-visited-state">I’m new to the childcare service, what do I do first?</a>
+    </header>
+  </div>
+
+  <div class="govuk-grid-column-full">
+
+    <div class="pta-card-container">
+    <div class="pta-card">
+      <h3 class="govuk-heading-s"><a href="#">Your Tax-Free Childcare service account</a></h3>
+      <p class="govuk-body">Manage your Tax-Free Childcare account, pay money in and select and pay childcare providers.</p>
+    </div>
+    <div class="pta-card">
+      <h3 class="govuk-heading-s"><a href="#">30 hours free childcare</a></h3>
+      <p class="govuk-body">View your 30 hours free childcare codes</p>
+    </div>
+    <div class="pta-card">
+      <h3 class="govuk-heading-s"><a href="service-childcare-secure-messages">Secure messages</a></h3>
+      <p class="govuk-body">View messages about your application and account.</p>
+    </div>
+  </div>
+
+  <div class="pta-card-container">
+  <div class="pta-card">
+    <h3 class="govuk-heading-s"><a href="#">Contact details</a></h3>
+    <p class="govuk-body">View or change your email address or phone number.</p>
+  </div>
+  <div class="pta-card">
+    <h3 class="govuk-heading-s"><a href="service-childcare-reconfirm">Reconfirmation</a></h3>
+    <p class="govuk-body">Confirm your details are up to date every 3 months. You’ll next need to do this between 31 January 2023 and 21 February 2023.</p>
+  </div>
+  <div class="pta-card">
+    <h3 class="govuk-heading-s"><a href="#">Security</a></h3>
+    <p class="govuk-body">Reset your telephone password, change and view your security check questions.</p>
+  </div>
+  </div>
+
+  <div class="pta-card-container">
+  <div class="pta-card">
+    <h3 class="govuk-heading-s"><a href="#">Re-apply or apply for a new child</a></h3>
+    <p class="govuk-body">Apply for a new child, or one who wasn’t eligible in an earlier application.</p>
+  </div>
+  <div class="pta-card">
+    <h3 class="govuk-heading-s"><a href="#">Your last application</a></h3>
+    <p class="govuk-body">View your last application or reconfirmation summary.</p>
+  </div>
+  <div class="pta-card">
+  </div>
+  </div>
+
+  </div>
+
+</div>
+{% endblock %}
