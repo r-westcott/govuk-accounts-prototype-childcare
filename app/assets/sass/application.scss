@@ -86,8 +86,25 @@ $govuk-assets-path: '/govuk/assets/';
         background-color: #f3f2f1;
     }
 
+    // account header
 
-// header
+    @media only screen and (min-width: 770px){
+      .govuk-header--service-nav-mobile {
+        display: none;
+      }
+    }
+
+    @media only screen and (max-width: 770px){
+      .govuk-header--service-nav-desktop {
+        display: none;
+      }
+    }
+
+    .govuk-header__content--service-nav .govuk-header__navigation.govuk-header__navigation--service-nav .govuk-header__navigation-item  {
+      margin-left: 0px;
+    }
+
+// service header
 
 .header-link {
   color: white;
