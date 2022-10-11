@@ -102,21 +102,30 @@ $govuk-assets-path: '/govuk/assets/';
   display: inline;
   float: right;
   cursor: pointer;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .service-header__navigation-open {
   background-color: #f3f2f1;
   color: #1d70b8;
+  box-shadow: 0px 29px #f3f2f1;
 }
 
+
+
 .service-header__navigation-open .expand-icon-fill {
-  rotate: 0deg;
+  rotate: 180deg;
   color: #1d70b8;
   fill: #1d70b8;
 }
 
+.service-header__navigation-open :hover {
+  color: #1d70b8;
+}
+
 .expand-icon-fill {
-  rotate: 180deg;
+  rotate: 0deg;
   fill: white;
 }
 

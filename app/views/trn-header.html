@@ -45,7 +45,7 @@
     </div>
   </div>
 </header>
-<div id="myDIV" class="service-header">
+<div id="myDIV" class="service-header" style="display: none;">
 <div class="govuk-header__container govuk-width-container">
   <ul class="govuk-list">
     <li><a href="/account/account-home-with-trn" class="govuk-link govuk-heading-s govuk-link--no-visited-state service-header-link">Home</a></li>
@@ -58,10 +58,10 @@
 <script>
   function myFunction() {
     var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
+    if (x.style.display === "block") {
       x.style.display = "none";
+    } else {
+      x.style.display = "block";
     };
     
     {

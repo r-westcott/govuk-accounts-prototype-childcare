@@ -21,7 +21,7 @@
     </div>
   </div>
 </header>
-
+<!--DESKTOP-->
 <div class="govuk-header--service-nav">
   <div class="govuk-width-container">
     <div class="govuk-header__content govuk-header__content--service-nav" data-module="govuk-header">
@@ -51,3 +51,43 @@
   </div>
   <hr class="govuk-section-break govuk-section-break--visible">
 </div>
+
+<!--MOBILE-->
+<div class="govuk-header--service-nav">
+  <div class="govuk-width-container">
+    <div class="govuk-header__content govuk-header__content--service-nav" data-module="govuk-header">
+        <nav onclick="myFunction()" aria-label="Menu" class="govuk-header__navigation govuk-header__navigation--service-nav">
+          <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" aria-expanded="false"></button>
+          <ul id="navigation-mobile" class="govuk-header__navigation-list" style="display: none;">
+            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "payg-home" %} govuk-header__navigation-item--active {% endif %}">
+                <a class="govuk-header__link" href="/account/account-home">
+                Home
+                </a>
+            </li>
+            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "your-details" %} govuk-header__navigation-item--active {% endif %}">
+                <a class="govuk-header__link" href="/account/account-settings">
+                Settings
+                </a>
+            </li>
+            <li class="govuk-header__navigation-item {% if activeServiceNavItem == "" %} govuk-header__navigation-item--active {% endif %}">
+                <a class="govuk-header__link" href="/">
+                Sign out
+                </a>
+          </li>
+          </ul>
+        </nav>
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("navigation-mobile");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+  </script>
