@@ -22,10 +22,8 @@ Sign in to your GOV.UK account
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-l">
-      Sign in to your GOV.UK account
+      Enter your email address to sign in to GOV.UK One Login
     </h1>
-
-    <p>Enter your email address to sign in.</p>
 
     <!--
       This URL would take you to the spinner page
@@ -35,8 +33,6 @@ Sign in to your GOV.UK account
     <form class="form" action="/auth/v9/signin-password" method="post">
 
       <div class="govuk-form-group">
-
-        <label class="govuk-label" for="email">Email address</label>
 
         <input class="govuk-input govuk-!-width-two-thirds" id="email" name="emailAddress" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
 
