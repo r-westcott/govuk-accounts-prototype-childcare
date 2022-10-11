@@ -101,12 +101,59 @@ $govuk-assets-path: '/govuk/assets/';
 .service-header__navigation {
   display: inline;
   float: right;
+  cursor: pointer;
+}
+
+.service-header__navigation-open {
+  background-color: #f3f2f1;
+  color: #1d70b8;
+}
+
+.service-header__navigation-open .expand-icon-fill {
+  rotate: 0deg;
+  color: #1d70b8;
+  fill: #1d70b8;
+}
+
+.expand-icon-fill {
+  rotate: 180deg;
+  fill: white;
+}
+
+.service-header__navigation-open .person-icon-bg {
+  fill: #1d70b8;
+}
+
+.person-icon-bg {
+  fill: white;
+}
+
+.service-header__navigation-open .person-icon-fg {
+  fill: white;
+}
+
+.person-icon-fg {
+  fill: #1d70b8;
 }
 
 .person-icon {
   top: .3em;
   margin-left: 10px;
+  margin-right: 5px;
   position: relative;
+}
+
+.service-header {
+  background-color: #f3f2f1;
+  top: -10px;
+  position: relative;
+}
+
+.service-header-link {
+  float: left;
+  width: 30%;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
 
@@ -123,3 +170,4 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-header__logo-onelogin {
   padding-right: 0px;
 }
+
