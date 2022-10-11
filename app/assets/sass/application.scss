@@ -104,6 +104,18 @@ $govuk-assets-path: '/govuk/assets/';
       margin-left: 0px;
     }
 
+    .account-menu-icon {
+      margin-left: 5px;
+      position: relative;
+      top: 1px;
+    }
+
+     .account-menu-icon-toggle {
+       rotate: 180deg;
+     }
+
+   
+
 // service header
 
 .header-link {
