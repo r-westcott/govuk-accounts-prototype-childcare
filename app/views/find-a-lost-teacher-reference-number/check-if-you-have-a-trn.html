@@ -1,8 +1,12 @@
-{% extends "layout-trn.html" %}
+{% extends "layout.html" %}
 
 {% block pageTitle %}
 Check if you have a TRN – {{ serviceName }}
 {% endblock %}
+
+{% set serviceName %}
+  Find a lost teacher reference number (TRN)
+{% endset%}
 
 {% block beforeContent %}
   <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
