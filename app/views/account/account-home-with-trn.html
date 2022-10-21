@@ -5,7 +5,7 @@
 {% set activeServiceNavItem = "payg-home" %}
 
 {% block pageTitle %}
-  GOV.UK One Login - Home
+  GOV.UK One Login - Your services
 {% endblock %}
 
 {% block beforeContent %}
@@ -22,37 +22,21 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-        Your GOV.UK One Login
+        Your services
       </h1>
       <p>
-        You’re signed in as <span class="govuk-!-font-weight-bold">name@email.com</span> 
+        You’re signed in as <span class="govuk-!-font-weight-bold">{{ data['emailAddress'] or 'your.name@example.com' }}</span> 
       </p>
 
-      <h2 class="govuk-heading-m">Services you've used</h2>
-
       <div class="service-card--with-title">
         <div class="service-card-title">
-          <h3 class="govuk-heading-s"><span class="govuk-body">Part of</span> Teacher services</h3>
+          <h3 class="govuk-heading-s">Childcare service</h3>
         </div>
         <div class="service-card-body">
-        <p><a href="/find-a-lost-teacher-reference-number/start" class="govuk-link--no-visited-state">Find a lost teacher reference number (TRN)</a></p>
-        <p class="service-card-date">Last used: 12 October 2022</p>
-        </div>
-      </div>
-
-      <div class="service-card--with-title">
-        <div class="service-card-title">
-          <h3 class="govuk-heading-s">The childcare service</h3>
-        </div>
-        <div class="service-card-body">
+        <p>Manage your Tax-Free Childcare and 30 hours free childcare.</p>
         <p><a href="/childcare/service-childcare-home" class="govuk-link--no-visited-state">Go to your childcare account</a></p>
-        <p class="service-card-date">Last used: 10 October 2022</p>
+        <p class="service-card-date">Last used: 25 October 2022</p>
         </div>
-      </div>
-
-      <div class="service-card--no-title">
-        <p><a href="https://www.gov.uk/request-copy-criminal-record" class="govuk-link--no-visited-state">Request a basic DBS check</a></p>
-        <p class="service-card-date">Last used: 22 June 2021</p>
       </div>
 
       <div class="service-card--with-title">
@@ -60,46 +44,63 @@
           <h3 class="govuk-heading-s">Personal tax account</h3>
         </div>
         <div class="service-card-body">
+        <p>Check your records and manage your details with HM Revenue and Customs (HMRC).</p>
         <p><a href="/pta/service-pta-home" class="govuk-link--no-visited-state">Go to your personal tax account</a></p>
-        <p class="service-card-date">Last used: 10 October 2019</p>
+        <p class="service-card-date">Last used: 5 September 2022</p>
         </div>
       </div>
 
-      <div class="service-card--no-title">
+      <h2 class="govuk-heading-m">
+        Other tasks
+      </h2>
+
+      <div class="service-card--other-task">
+        <p><a href="/find-a-lost-teacher-reference-number/start" class="govuk-link--no-visited-state">Find a lost teacher reference number (TRN)</a></p>
+        <p class="service-card-date">Last used: 25 October 2022</p>
+      </div>
+
+      <div class="service-card--other-task">
+        <p><a href="https://www.gov.uk/request-copy-criminal-record" class="govuk-link--no-visited-state">Request a basic DBS check</a></p>
+        <p class="service-card-date">Last used: 22 June 2021</p>
+      </div>
+
+      <div class="service-card--other-task">
         <p><a href="https://www.gov.uk/apply-renew-passport" class="govuk-link--no-visited-state">Apply for a passport</a></p>
         <p class="service-card-date">Last used: 14 May 2018</p>
       </div>
       
       <div class="account-blurb">
-      <h2 class="govuk-heading-m">Using GOV.UK One Login</h2>
-
-      <p>You can use GOV.UK One Login to sign in to some services on GOV.UK.</p>
-
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            Services you can sign in to with GOV.UK One Login 
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Apply for a passport</li>
-            <li>Dart charge</li> 
-            <li>Find a lost teacher reference number (TRN)</li> 
-            <li>Licensing for exporting controlled goods (LITE)</li> 
-            <li>Personal tax account</li> 
-            <li>Recruit an apprentice</li> 
-            <li>Register for a National Professional Qualification (NPQ)</li> 
-            <li>Request a basic DBS check</li> 
-            <li>The childcare service</li> 
-          </ul>
+    
+        <h3 class="govuk-heading-m">Services you can use with your GOV.UK One Login</h3>
+        <p>You can use your GOV.UK One Login to access some government services (for example your childcare account or your personal tax account).</p>
+        
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Services you can use with your GOV.UK One Login
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p>These are all the services you can use with your GOV.UK One Login:</p>
+            <ul class="govuk-list govuk-list--bullet">
+              <li><a href="#">Apply for a passport</a></li>
+              <li><a href="#">Dart charge</a></li> 
+              <li><a href="#">Find a lost teacher reference number (TRN)</a></li> 
+              <li><a href="#">Licensing for exporting controlled goods (LITE)</a></li> 
+              <li><a href="#">Personal tax account</a></li> 
+              <li><a href="#">Recruit an apprentice</a></li> 
+              <li><a href="#">Register for a National Professional Qualification (NPQ)</a></li> 
+              <li><a href="#">Request a basic DBS check</a></li> 
+              <li><a href="#">The childcare service</a></li> 
+            </ul>
+          </div>
+        </details>
+    
+        <p>There are some government services that you cannot use with your GOV.UK One Login yet (for example Universal Credit).</p> 
+    
+        <p>In the future, you'll be able to use your GOV.UK One Login to access all services on GOV.UK.</p> 
+        
         </div>
-      </details>
-
-      <p>GOV.UK One Login is currently separate from some other government accounts (for example Universal Credit).</p>
-
-      <p>In the future, you'll be able to use it to sign in to all services on GOV.UK.</p>
-    </div>
      
     </div>
   </div>

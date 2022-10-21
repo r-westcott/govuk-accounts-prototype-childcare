@@ -33,7 +33,7 @@
             Email address
           </dt>
           <dd class="govuk-summary-list__value">
-            name@email.com
+            {{ data['emailAddress'] or 'your.name@example.com' }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="#">
@@ -70,7 +70,7 @@
       </dl>
 
       <h2 class="govuk-heading-m">Delete your GOV.UK One Login</h2>
-      <p>This will permanently delete your GOV.UK One Login account. You’ll no longer be able to sign in to the services you’ve used with it.</p>
+      <p>This will permanently delete your GOV.UK One Login. You’ll no longer be able to sign in to the services you’ve used with it.</p>
       <p><a href="account-delete" class="govuk-link--no-visited-state">Delete your GOV.UK One Login</a></p>
     </div>
   </div>
