@@ -61,7 +61,7 @@ The childcare service - Reconfirmation summary
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><span class="govuk-body">Email</span></th>
-          <td class="govuk-table__cell">name@email.com</td>
+          <td class="govuk-table__cell">{{ data['emailAddress'] or 'your.name@example.com' }}</td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><span class="govuk-body">Telephone number</span></th>

@@ -87,7 +87,7 @@ Check your answers – {{ serviceName }} – GOV.UK Prototype Kit
         </div>
       </dl>
 
-      <p>If we find a TRN matching your details, we will send it to the email address for your GOV.UK One Login: email@example.com.</p>
+      <p>If we find a TRN matching your details, we will send it to the email address for your GOV.UK One Login: <span class="govuk-!-font-weight-bold">{{ data['emailAddress'] or 'your.name@example.com' }}</span>.</p>
 
       <form action="confirmation" method="post" novalidate>
 

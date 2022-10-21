@@ -79,10 +79,20 @@ $govuk-assets-path: '/govuk/assets/';
         margin-bottom: 20px;
     }
 
+    // other task cards
+
+    .service-card--other-task {
+      border-top: 1px solid #b1b4b6;
+      padding-top: 15px;
+      margin-bottom: 20px;
+  }
+
     // account blurb
 
     .account-blurb {
         padding: 20px;
+        margin-top: 40px;
+        margin-bottom: 20px;
         background-color: #f3f2f1;
     }
 
